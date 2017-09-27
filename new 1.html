@@ -1,0 +1,137 @@
+<nav class="container">
+  <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+  <a class="tw" href="#"><i class="fa fa-twitter"></i></a>
+  <a class="gp" href="#"><i class="fa fa-google-plus"></i></a>
+  <a class="ig" href="#"><i class="fa fa-instagram"></i></a>
+
+.container 
+			{
+			width: 100%;
+			display: table;
+			margin: 0;
+			}
+
+		nav a 
+			{
+			display: table-cell;
+			color: white;
+			width: 14.2%;
+			text-align: center;
+			font-size: 2em;
+			@media (max-width: 768px)
+				{
+				font-size: 1.5em;
+				}
+			padding:.5em;
+			&:first-child
+				{
+				border-radius: 5px 0 0 5px;
+				@media (max-width: 768px)
+					{
+					border-radius: 0;
+					}
+				}
+			&:last-child 	
+				{
+				border-radius: 0px 5px 5px 0px;
+				@media (max-width: 768px)
+					{
+					border-radius: 0;
+					}
+				}
+			}
+
+		$fb: #3B5998;
+		/*Facebook*/
+		$tw: #55ACEE;
+		/*Twitter*/
+		$gp: #DD4B39;
+		/*Google Plus*/
+		$ig: #517FA4;
+		/*Instagram*/
+		
+		/* 
+		Setting equal widths dependent on the number of links.
+		Add or remove as many as necessary.
+		*/
+		nav a:first-child:nth-last-child(4),
+		nav a:first-child:nth-last-child(4) ~ a 
+			{
+			width: 25%;
+			}
+			
+/*
+Assigning link background colors and setting the hover and active states. For quick adding of buttons, perform a search + replace on the 2 letter variable name.
+*/
+
+		nav a.fb 
+			{
+			background: $fb;
+			text-shadow: 1px 1px 0px darken($fb, 15%);
+			&:hover 
+				{
+				color: saturate($fb, 10%) !important;
+				background: darken($fb, 10%)
+				}
+			&:active
+				{
+				color: $fb;
+				background: darken($fb, 20%)
+				}
+			}
+
+		nav a.tw 
+			{
+			background: $tw;
+			text-shadow: 1px 1px 0px darken($tw, 15%);
+			&:hover 
+				{
+				color: saturate($tw, 10%) !important;
+				background: darken($tw, 10%)
+				}
+			&:active 
+				{
+				color: $tw;
+				background: darken($tw, 20%)
+				}
+			}
+
+		nav a.gp 
+			{
+			background: $gp;
+			text-shadow: 1px 1px 0px darken($gp, 15%);
+			&:hover 
+				{
+				color: saturate($gp, 10%) !important;
+				background: darken($gp, 10%)
+				}
+			&:active 
+				{
+				color: $gp;
+				background: darken($gp, 20%)
+				}
+			}
+
+		nav a.ig 
+			{
+			background: $ig;
+			text-shadow: 1px 1px 0px darken($ig, 15%);
+			&:hover
+				{
+				color: saturate($ig, 10%) !important;
+				background: darken($ig, 10%)
+				}
+			&:active 
+				{
+				color: $ig;
+				background: darken($ig, 20%)
+				}
+			}
+			
+		<nav class="container">
+			<a class="fb" href="*"> <i class="fa fa-facebook"> </i> </a>
+			<a class="tw" href="*"> <i class="fa fa-twitter"> </i> </a>
+			<a class="gp" href="*"> <i class="fa fa-google-plus"> </i> </a>
+			<a class="ig" href="*"> <i class="fa fa-instagram"> </i> </a>
+		</nav>
+		
